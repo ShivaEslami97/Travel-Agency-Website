@@ -1,0 +1,60 @@
+/**** media query  *****/
+@media only screen and (max-width: 1040px) {
+}
+@media only screen and (max-width: 991px) {
+  .header {
+    padding: 3rem;
+    background-color: var(--clr-white);
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+  }
+  .nav {
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    width: 100%;
+    padding: 2rem;
+    z-index: 9;
+    background-color: var(--clr-white);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    opacity: 0;
+    transition: all 0.35s ease;
+    visibility: hidden;
+    display: none;
+  }
+  .nav.is-active {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+  .nav__list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .hero__img-rounded,
+  .features__heading {
+    display: none;
+  }
+  .booking__baner {
+    width: 100%;
+    margin: 0rem auto 0;
+    border-top-left-radius: var(--border-radius-lg);
+    gap: 2rem;
+  }
+  .booking__list {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+  }
+  .booking__baner .btn__secondary {
+    grid-column: span 2;
+  }
+}
